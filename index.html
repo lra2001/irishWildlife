@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Irish Wildlife Explorer</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="wildlife.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="https://kit.fontawesome.com/5860ee4324.js" crossorigin="anonymous"></script>
+    <meta name="keywords" content="Ireland, Wildlife, Animals, Species">
+    <meta name="description" content="Learn about the Irish Wildlife by air, land and water">
+    <meta name="author" content="Luis Almeida">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!--Header with logo and navbar-->
+    <header>
+        <div class="logo-title">
+            <img src="images/logo.png" alt="LA Logo" class="logo">
+            <h1>Irish Wildlife Explorer</h1>
+        </div>
+        <nav>
+            <a href="#animals">Animals</a>
+            <a href="#endangered">Endangered</a>
+            <a href="#quiz">Quiz</a>
+            <a href="#form">Form</a>
+        </nav>
+    </header>
+
+    <!--Main devided by sections for darkmode, slideshow, animals by element, endangered species, quiz and form-->
+    <main>
+        <section id="darkmode-selector">
+            <h3>Darkmode Toggle</h3>
+            <label class="checkbox">
+                <input type="checkbox" id="toggleDarkMode">
+                <span class="slider">
+                    <i class="fas fa-sun"></i> <!-- Default Sun icon for light mode -->
+                    <i class="fas fa-moon"></i> <!-- Moon icon to be used on dark mode -->
+                </span>
+            </label>
+        </section>
+
+        <section id="slideshow">
+            <h2>Automatic Slideshow</h2>
+
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">Image 1 of 6</div>
+                    <img src="images/bat.webp" alt="Picture of a bat" style="width:100%">
+                    <div class="text">Bat</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">Image 2 of 6</div>
+                    <img src="images/deer.webp" alt="Picture of a group of deer" style="width:100%">
+                    <div class="text">Deer</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">Image 3 of 6</div>
+                    <img src="images/dolphin.webp" alt="Picture of a dolphin" style="width:100%">
+                    <div class="text">Dolphin</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">Image 4 of 6</div>
+                    <img src="images/killer-whale.webp" alt="Picture of a killer whale" style="width:100%">
+                    <div class="text">Killer Whale</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">Image 5 of 6</div>
+                    <img src="images/squirrel.webp" alt="Picture of a red squirrel" style="width:100%">
+                    <div class="text">Red Squirrel</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">Image 6 of 6</div>
+                    <img src="images/kingfisher.webp" alt="Picture of a kingfisher" style="width:100%">
+                    <div class="text">Kingfisher</div>
+                </div>
+                <h5>Slideshow changing image every 3 seconds</h5>
+            </div>
+        </section>
+        <section id="animals">
+            <h2>Explore Animals by Element</h2>
+            <select id="elementSelector">
+                <option value="">--Choose an element--</option>
+                <option value="air">Air</option>
+                <option value="land">Land</option>
+                <option value="water">Water</option>
+            </select>
+            <div id="animalList"></div>
+        </section>
+
+        <section id="endangered">
+            <h2>Endangered Species</h2>
+            <ul id="endangeredList"> <!--List is populated using Javascript-->
+            </ul>
+        </section>
+
+        <section id="quiz">
+            <h2>Which Animal Are You?</h2>
+            <button id="startQuiz">Take the Quiz</button>
+            <!--Quiz result is populated using Javascript-->
+            <p id="quizResult"></p>
+        </section>
+
+        <section id="form">
+            <h2>Tell Us Your Favorite Animal</h2>
+            <form id="animalForm">
+                <input type="text" id="favoriteAnimal" placeholder="Favorite Animal" required>
+                <input type="text" id="whyFavorite" placeholder="Why do you like it?" required>
+                <button type="submit">Submit</button>
+            </form>
+            <!--Javascript populates a thank you message with the favorite animal selection and reason-->
+            <div id="formMessage"></div>
+        </section>
+    </main>
+    <script src="wildlife.js"></script>
+    <footer>
+        <h5>Copyright &copy; <span id="year"></span> Luis Almeida (UCD) All Rights Reserved</h5>
+    </footer>
+</body>
+
+</html>
